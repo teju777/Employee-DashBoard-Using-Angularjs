@@ -1,0 +1,36 @@
+<table id="Table_view" data-ng-model="View">
+    <tr>
+        <th>Employee Id</th>
+        <th><input type="text" id="EId" value="{{View.Emp_id}}"></th>
+    </tr>
+    <tr>
+        <th>First Name:</th>
+        <th><input type="text" id="fName" value="{{View.FirstName}}"></th>
+    </tr>
+    <tr>
+        <th>Middle Name:</th>
+        <th><input type="text" id="mName" value="{{View.MiddleName}}"></th>
+    </tr>
+    <tr>
+        <th>Last Name</th>
+        <th><input type="text" id="lName" value="{{View.LastName}}"></th>
+    </tr>
+    <tr>
+        <th>Birth Date:</th>
+        <th><input type="text" id="Bdate" value="{{View.date}}"></th>
+    </tr>
+    <tr>
+        <th>Birth Month:</th>
+        <th><input type="text" id="Bmonth" value={{View.month}}></th>
+    </tr>
+    <tr>
+        <th>Birth Year:</th>
+        <th><input type="text" id="Byear" value="{{View.year}}"></th>
+    </tr>
+
+
+</table>
+
+<div id="Save">
+    <a href="#!Tab"><input type="button" ng-click="Save()" value="Update"></a>
+</div>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+</head>
+<body ng-controller="SecondCtrl">
+<div id="Div_main">
+    <ul>
+        <li><a href="#/!">Home</a></li>
+        <li><a href="#!Tab">Employee Details</a></li>
+        <li id="log"><a href="#!Log" data-ng-model="LOG">Log In</a> </li>
+    </ul>
+</div>
+
+<div data-ng-view></div>
+
+<script src="Home.js"></script>
+</body>
+</html>

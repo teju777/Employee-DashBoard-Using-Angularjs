@@ -1,0 +1,41 @@
+<br>
+<br>
+<b>Filter by Employee Id:</b>
+<input type="text" ng-model="Search">
+
+
+<br>
+<br>
+<b>Order By:</b>
+<select ng-model="Order">
+    <option></option>
+    <option value="FirstName">Employee Name</option>
+    <option value="2017-year">Age</option>
+</select>
+
+
+
+
+<table id="Table1" data-ng-model="Table1">
+    <tr>
+        <th>Employee ID</th>
+        <th>Full Name</th>
+        <th>Birth Date</th>
+        <th>Age</th>
+        <th>Action 1 Edit</th>
+        <th>Action 2 Remove</th>
+    </tr>
+    <tr ng-repeat="x in list | filter:Search | orderBy:Order">
+        <td>{{x.Emp_id}}</td>
+        <td>{{x.FirstName+" "+x.MiddleName+" "+x.LastName}}</td>
+        <td>{{x.month+"/"+x.date+"/"+ x.year}}</td>
+        <td>{{2017-x.year}}</td>
+        <td><a href="#!Tab1"><input type="button" id="btn2" ng-click="Edit($index)" value="Edit"></a></td>
+        <td><input type="button" id="btn3" value="Remove" ng-click="rem($index)"></td>
+    </tr>
+
+</table>
+
+<div id="Add">
+    <button id="btn"><a style="text-decoration: none" href="#!Tab2">Add an Employee</a></button>
+</div>
